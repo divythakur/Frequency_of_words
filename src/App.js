@@ -49,10 +49,18 @@ class Terrible extends Component{
         }
         t+='</table>';
         document.getElementById("table-wrapper").innerHTML=t;
+        
                 
                  
 
             })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+              })
+              .finally(function () {
+                // always executed
+              });
            
 
        e.preventDefault()   
