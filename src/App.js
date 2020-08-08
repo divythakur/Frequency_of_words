@@ -15,7 +15,7 @@ class Terrible extends Component{
      onClickHandler=(e)=>{
          var data="";
             axios
-            .get("https://www.google.com/url?q=http://terriblytinytales.com/test.txt&sa=D&ust=1596861542314000&usg=AFQjCNHuKBKRbvapNDlEixj_O3yYxGPxxw")
+            .get("https://terriblybackend.herokuapp.com/data")
             .then((res) => {
                data =res.data;
                var myArray =data.split('↵').join(', ').split(':').join(', ').split(' ').join(', ').split('/').join(', ').split('@').join(', ').split('-').join(', ').split('.').join(', ').split('?').join(', ').split(')').join(', ').split(','); 
@@ -40,6 +40,8 @@ class Terrible extends Component{
                console.log(this.state.num)
 
                 var t=`<table><tr><th>Word</th><th>Frequency</th></tr>`;
+                if(this.state.num<=n)
+                {
         for(i=0;i<this.state.num;i++)
         {
             t+=`<tr>`+
@@ -49,6 +51,14 @@ class Terrible extends Component{
         }
         t+='</table>';
         document.getElementById("table-wrapper").innerHTML=t;
+    }
+    else{
+        document.getElementById("table-wrapper").innerHTML="";
+        alert("Choose something in range to 0-"+n);
+
+
+
+    }
         
                 
                  
