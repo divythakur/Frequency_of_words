@@ -40,7 +40,7 @@ class Terrible extends Component{
                console.log(this.state.num)
 
                 var t=`<table><tr><th>Word</th><th>Frequency</th></tr>`;
-                if(this.state.num<=n)
+                if(this.state.num<=n && this.state.num>=0)
                 {
         for(i=0;i<this.state.num;i++)
         {
