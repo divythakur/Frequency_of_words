@@ -15,7 +15,7 @@ class Terrible extends Component{
      onClickHandler=(e)=>{
          var data="";
             axios
-            .get("https://terriblybackend.herokuapp.com/data")
+            .get("https://www.google.com/url?q=http://terriblytinytales.com/test.txt&sa=D&ust=1596861542314000&usg=AFQjCNHuKBKRbvapNDlEixj_O3yYxGPxxw")
             .then((res) => {
                data =res.data;
                var myArray =data.split('↵').join(', ').split(':').join(', ').split(' ').join(', ').split('/').join(', ').split('@').join(', ').split('-').join(', ').split('.').join(', ').split('?').join(', ').split(')').join(', ').split(','); 
@@ -54,13 +54,7 @@ class Terrible extends Component{
                  
 
             })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-              })
-              .finally(function () {
-                // always executed
-              });
+            
            
 
        e.preventDefault()   
